@@ -4,31 +4,35 @@ import {
     SiteConfig,
 } from "@/lib/metadata";
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Crimson_Pro, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-    variable: "--font-geist-sans",
+const fontSans = Inter({
     subsets: ["latin"],
+    variable: "--font-sans",
 });
 
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
+const fontSerif = Crimson_Pro({
     subsets: ["latin"],
+    variable: "--font-serif",
 });
 
-const site_name = "${site_name}"; // dummy site_name; you must change it to the actual one.
+const fontMono = JetBrains_Mono({
+    subsets: ["latin"],
+    variable: "--font-mono",
+});
+
 export const siteConfig: SiteConfig = {
     baseUrl: "https://site_url.com",
-    siteName: site_name,
-    title: site_name,
+    siteName: "TAJBID FOOD",
+    title: "TAJBID",
     description: "Site description",
     ogImage: "/brand_logo_xl.png",
     twitterHandle: "@brandname",
     authorName: "Arefur Rahman Khan",
     portfolioUrl: "http://arefolio.vercel.app/",
     locale: "en_US",
-    themeColor: "#F0F9FF",
+    themeColor: "#F8F3EC",
     keywords: ["keyword1", "keyword2", "keyword3"],
 };
 
@@ -43,7 +47,7 @@ export default function RootLayout({
     return (
         <html
             lang="en"
-            className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+            className={`${fontSans.variable} ${fontSerif.variable} ${fontMono.variable} h-full antialiased`}
         >
             <body className="min-h-full flex flex-col">{children}</body>
         </html>
