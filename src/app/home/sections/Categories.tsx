@@ -47,9 +47,12 @@ function Categories() {
         },
     ];
     return (
-        <div>
-            <SectionHeader header="Categories" />
-            <div className="grid grid-cols-7 gap-2 py-3">
+        <section className="px-4 py-3 sm:px-6 lg:px-8">
+            <SectionHeader
+                eyebrow="Curated For Your Table"
+                header="Shop by Category"
+            />
+            <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-3 py-3">
                 {categories.map((cat) => (
                     <CategoryCard
                         key={cat.id}
@@ -59,7 +62,7 @@ function Categories() {
                     />
                 ))}
             </div>
-        </div>
+        </section>
     );
 }
 

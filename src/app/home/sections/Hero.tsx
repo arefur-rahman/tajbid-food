@@ -56,7 +56,7 @@ function Hero() {
     }, [api]);
 
     return (
-        <section className="px-4 py-5 sm:px-6 lg:px-8 lg:py-8">
+        <section className="px-4 py-5 sm:px-6 lg:px-8 lg:py-2">
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-12">
                 <div className="flex min-h-0 flex-col lg:col-span-8">
                     <Carousel
